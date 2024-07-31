@@ -104,12 +104,16 @@ input:focus {
   margin-bottom: 2.4rem;
 }
 
-.mortgageAmount label {
+.mortgageAmount label,
+.term__container label,
+.rate__container label {
   color: var(--slate-700);
   margin-bottom: 8px;
 }
 
-.amount__input__box {
+.amount__input__box,
+.term__input__box,
+.rate__input__box {
   display: flex;
   align-items: center;
   border: 1px solid var(--slate-300);
@@ -119,7 +123,9 @@ input:focus {
   margin-bottom: 8px;
 }
 
-.amount__error {
+.amount__error,
+.term__error,
+.rate__error {
   color: var(--red-500);
   font-size: 1.4rem;
   opacity: 0;
@@ -130,6 +136,30 @@ input:focus {
 }
 
 .amount--focus {
+  background-color: var(--lime-500);
+}
+
+/* Years and Rate */
+.termrate {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.term__input__box.term--focus {
+  border: 1px solid var(--lime-500);
+}
+
+.years--focus {
+  background-color: var(--lime-500);
+}
+
+.rate__input__box.rate--focus {
+  border: 1px solid var(--lime-500);
+}
+
+.percent--focus {
   background-color: var(--lime-500);
 }
 
