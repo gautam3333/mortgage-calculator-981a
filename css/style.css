@@ -32,6 +32,39 @@ body {
   background-color: var(--blue-100);
 }
 
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+label {
+  font-size: 1.6rem;
+  display: block;
+  line-height: 1.5;
+}
+
+span {
+  color: var(--slate-700);
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: var(--blue-100);
+  padding: 1.4rem 2.8rem;
+}
+
+input {
+  color: var(--slate-700);
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1.4rem 2.8rem;
+  border: none;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -65,6 +98,39 @@ body {
   border-bottom: 1px solid var(--slate-700);
   padding: 2px;
   cursor: pointer;
+}
+
+.mortgageAmount {
+  margin-bottom: 2.4rem;
+}
+
+.mortgageAmount label {
+  color: var(--slate-700);
+  margin-bottom: 8px;
+}
+
+.amount__input__box {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--slate-300);
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.amount__error {
+  color: var(--red-500);
+  font-size: 1.4rem;
+  opacity: 0;
+}
+
+.amount__input__box.amount__input--focus {
+  border: 1px solid var(--lime-500);
+}
+
+.amount--focus {
+  background-color: var(--lime-500);
 }
 
 /* Result */

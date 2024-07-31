@@ -15,6 +15,17 @@
           <h1>Mortgage Calculator</h1>
           <button>Clear All</button>
         </div>
+
+        <form onsubmit="handleSubmit(event)">
+          <div class="mortgageAmount">
+            <label for="amount">Mortgage Amount</label>
+            <div class="amount__input__box">
+              <span class="">&#8377;</span>
+              <input type="text" id="amount" class="amount__input" />
+            </div>
+            <p class="amount__error">This field is required</p>
+          </div>
+        </form>
       </article>
 
       <!-- Result -->
