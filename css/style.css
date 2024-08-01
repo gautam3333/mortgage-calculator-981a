@@ -265,6 +265,7 @@ input[type='radio'] {
   justify-content: center;
   align-items: center;
   height: 100%;
+  display: none;
 }
 
 .image-text img {
@@ -282,4 +283,35 @@ input[type='radio'] {
 .image-text p {
   color: var(--slate-300);
   text-align: center;
+}
+
+/* mortgage calculation */
+.calculation h2 {
+  color: var(--white);
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.calculation p {
+  color: var(--slate-300);
+  margin-bottom: 3.2rem;
+}
+
+.monthly-payment {
+  border-top: 5px solid var(--lime-500);
+  border-radius: 5px;
+  background-color: var(--slate-800);
+  padding: 3.2rem;
+}
+
+.monthly-payment h2 {
+  color: var(--lime-500);
+  font-size: 4.8rem;
+  padding: 1.2rem 0 2.4rem 0;
+  border-bottom: 1px solid var(--slate-300);
+}
+
+.monthly-payment h3 {
+  color: var(--white);
+  font-size: 2.4rem;
 }
