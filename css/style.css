@@ -51,7 +51,7 @@ span {
   padding: 1.4rem 2.8rem;
 }
 
-input {
+input[type='text'] {
   color: var(--slate-700);
   font-family: inherit;
   font-size: 1.6rem;
@@ -61,8 +61,12 @@ input {
   width: 100%;
 }
 
-input:focus {
+input[type='text']:focus {
   outline: none;
+}
+
+input[type='radio'] {
+  transform: scale(1.4);
 }
 
 .container {
@@ -125,7 +129,8 @@ input:focus {
 
 .amount__error,
 .term__error,
-.rate__error {
+.rate__error,
+.radio__error {
   color: var(--red-500);
   font-size: 1.4rem;
   opacity: 0;
@@ -185,6 +190,41 @@ input:focus {
 
 .percent--error {
   background-color: var(--red-500);
+}
+
+/* Mortgage Type */
+.type {
+  margin-bottom: 2.4rem;
+}
+
+.type label:first-child {
+  color: var(--slate-700);
+  margin-bottom: 8px;
+}
+
+.radio__group {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1.4rem 2.8rem;
+  border: 1px solid var(--slate-300);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+}
+
+.radio__group:last-child {
+  margin-bottom: 0;
+}
+
+.radio__group label {
+  color: var(--slate-700);
+  font-weight: 600;
+}
+
+.radio__group.checked {
+  background-color: #fff7ed;
+  border: 1px solid var(--lime-500);
 }
 
 /* Result */

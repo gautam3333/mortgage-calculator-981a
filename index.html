@@ -45,7 +45,25 @@
             </div>
           </div>
 
-          <div class="type"></div>
+          <div class="type">
+            <label>Mortgage Type</label>
+            <div class="radio__group">
+              <input
+                type="radio"
+                name="type"
+                id="repayment"
+                value="repayment"
+              />
+              <label for="repayment">Repayment</label>
+            </div>
+
+            <div class="radio__group">
+              <input type="radio" name="type" id="interest" value="interest" />
+              <label for="repayment">Interest Only</label>
+            </div>
+
+            <p class="radio__error">This field is required</p>
+          </div>
 
           <button>Submit</button>
         </form>

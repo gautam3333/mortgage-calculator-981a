@@ -13,6 +13,8 @@ const rateInputBox = rateInput.parentElement;
 const spanPercent = rateInputBox.children[1];
 const rateError = document.querySelector('.rate__error');
 
+const radioError = document.querySelector('.radio__error');
+
 // amount input focus
 amountInput.addEventListener('focus', () => {
   amountInputBox.classList.add('amount__input--focus');
@@ -44,6 +46,21 @@ rateInput.addEventListener('blur', () => {
   rateInputBox.classList.remove('rate--focus');
   spanPercent.classList.remove('percent--focus');
 });
+
+// radio button focus
+document
+  .querySelectorAll('.radio__group input[type="radio"]')
+  .forEach((radio) => {
+    radio.addEventListener('change', function () {
+      document.querySelectorAll('.radio__group').forEach((group) => {
+        group.classList.remove('checked');
+      });
+
+      if (radio.checked) {
+        radio.closest('.radio__group').classList.add('checked');
+      }
+    });
+  });
 
 // function to handle submit
 function handleSubmit(event) {
@@ -80,5 +97,20 @@ function handleSubmit(event) {
     rateError.style.opacity = 0;
     rateInputBox.classList.remove('rate__input--error');
     spanPercent.classList.remove('percent--error');
+  }
+
+  // show error message for button when it is not selected
+  const radios = document.querySelectorAll('.radio__group input[type="radio"]');
+  let isChecked = false;
+  radios.forEach((radio) => {
+    if (radio.checked) {
+      isChecked = true;
+    }
+  });
+
+  if (isChecked) {
+    radioError.style.opacity = 0;
+  } else {
+    radioError.style.opacity = 1;
   }
 }
