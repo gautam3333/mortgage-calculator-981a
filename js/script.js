@@ -24,6 +24,8 @@ const pContainer = document.querySelector(
   '.monthly-payment .repayment-or-interest'
 );
 
+const reset = document.querySelector('.reset');
+
 // amount input focus
 amountInput.addEventListener('focus', () => {
   amountInputBox.classList.add('amount__input--focus');
@@ -130,9 +132,10 @@ function handleSubmit(event) {
   monthlyPayment = format(monthlyPayment);
   totalPayment = format(totalPayment);
   totalInterest = format(totalInterest);
-  console.log(monthlyPayment);
-  console.log(totalPayment);
-  console.log(totalInterest);
+
+  // console.log(monthlyPayment);
+  // console.log(totalPayment);
+  // console.log(totalInterest);
 
   // hide image text and show calculation container
   if (amount && term && rate) {
@@ -174,3 +177,15 @@ function format(number) {
     maximumFractionDigits: 2,
   }).format(number);
 }
+
+// reset all fields
+reset.addEventListener('click', function () {
+  const radios = document.querySelectorAll('.radio__group input[type="radio"]');
+  amountInput.value = '';
+  termInput.value = '';
+  rateInput.value = '';
+
+  radios.forEach((radio) => {
+    radio.checked = false;
+  });
+});
