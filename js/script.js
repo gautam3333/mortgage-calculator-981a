@@ -54,19 +54,31 @@ function handleSubmit(event) {
 
   if (!amount) {
     amountError.style.opacity = 1;
+    amountInputBox.classList.add('amount__input--error');
+    spanRupee.classList.add('amount--error');
   } else {
     amountError.style.opacity = 0;
+    amountInputBox.classList.remove('amount__input--error');
+    spanRupee.classList.remove('amount--error');
   }
 
   if (!term) {
     termError.style.opacity = 1;
+    termInputBox.classList.add('term__input--error');
+    spanYears.classList.add('years--error');
   } else {
     amountError.style.opacity = 0;
+    termInputBox.classList.remove('term__input--error');
+    spanYears.classList.remove('years--error');
   }
 
   if (!rate) {
     rateError.style.opacity = 1;
+    rateInputBox.classList.add('rate__input--error');
+    spanPercent.classList.add('percent--error');
   } else {
     rateError.style.opacity = 0;
+    rateInputBox.classList.remove('rate__input--error');
+    spanPercent.classList.remove('percent--error');
   }
 }

@@ -139,6 +139,14 @@ input:focus {
   background-color: var(--lime-500);
 }
 
+.amount__input__box.amount__input--error {
+  border: 1px solid var(--red-500);
+}
+
+.amount--error {
+  background-color: var(--red-500);
+}
+
 /* Years and Rate */
 .termrate {
   display: flex;
@@ -161,6 +169,22 @@ input:focus {
 
 .percent--focus {
   background-color: var(--lime-500);
+}
+
+.term__input__box.term__input--error {
+  border: 1px solid var(--red-500);
+}
+
+.years--error {
+  background-color: var(--red-500);
+}
+
+.rate__input__box.rate__input--error {
+  border: 1px solid var(--red-500);
+}
+
+.percent--error {
+  background-color: var(--red-500);
 }
 
 /* Result */
