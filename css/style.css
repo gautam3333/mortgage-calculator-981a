@@ -71,6 +71,7 @@ input[type='radio'] {
 }
 
 .container {
+  background-color: var(--white);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-radius: 2rem;
@@ -255,4 +256,30 @@ input[type='radio'] {
 .result {
   background-color: var(--slate-700);
   padding: 6.4rem 3.2rem;
+  border-bottom-left-radius: 6.4rem;
+}
+
+.image-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image-text img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2.4rem;
+}
+
+.image-text h2 {
+  color: var(--white);
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.image-text p {
+  color: var(--slate-300);
+  text-align: center;
 }
