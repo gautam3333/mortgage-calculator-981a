@@ -15,6 +15,15 @@ const rateError = document.querySelector('.rate__error');
 
 const radioError = document.querySelector('.radio__error');
 
+const imageText = document.querySelector('.image-text');
+const calculationContainer = document.querySelector('.calculation');
+
+const monthlyPaymentBox = document.querySelector('.monthly-payment h2');
+const totalPaymentBox = document.querySelector('.monthly-payment h3');
+const pContainer = document.querySelector(
+  '.monthly-payment .repayment-or-interest'
+);
+
 // amount input focus
 amountInput.addEventListener('focus', () => {
   amountInputBox.classList.add('amount__input--focus');
@@ -124,6 +133,22 @@ function handleSubmit(event) {
   console.log(monthlyPayment);
   console.log(totalPayment);
   console.log(totalInterest);
+
+  // hide image text and show calculation container
+  if (amount && term && rate) {
+    imageText.classList.add('image-text--close');
+    monthlyPaymentBox.textContent = monthlyPayment;
+    if (type === 'repayment') {
+      pContainer.textContent = 'Total amount you will repay over the term';
+      totalPaymentBox.textContent = totalPayment;
+    } else if (type === 'interest') {
+      pContainer.textContent =
+        'Total amount of interest you will pay over the term';
+      totalPaymentBox.textContent = totalInterest;
+    }
+
+    calculationContainer.classList.add('calculation--open');
+  }
 }
 
 // function to compute the mortgage
