@@ -102,9 +102,11 @@ function handleSubmit(event) {
   // show error message for button when it is not selected
   const radios = document.querySelectorAll('.radio__group input[type="radio"]');
   let isChecked = false;
+  let type = null;
   radios.forEach((radio) => {
     if (radio.checked) {
       isChecked = true;
+      type = radio.value;
     }
   });
 
