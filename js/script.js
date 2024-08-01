@@ -115,4 +115,37 @@ function handleSubmit(event) {
   } else {
     radioError.style.opacity = 1;
   }
+
+  const result = calculateMortgageDetails(amount, term, rate);
+  let { monthlyPayment, totalPayment, totalInterest } = result;
+  monthlyPayment = format(monthlyPayment);
+  totalPayment = format(totalPayment);
+  totalInterest = format(totalInterest);
+  console.log(monthlyPayment);
+  console.log(totalPayment);
+  console.log(totalInterest);
+}
+
+// function to compute the mortgage
+function calculateMortgageDetails(amount, term, rate) {
+  let monthlyInterestRate = rate / 100 / 12;
+  let numberOfPayments = term * 12;
+
+  let monthlyPayment =
+    (amount * monthlyInterestRate) /
+    (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
+
+  let totalPayment = monthlyPayment * numberOfPayments;
+  let totalInterest = totalPayment - amount;
+
+  return { monthlyPayment, totalPayment, totalInterest };
+}
+
+// function to format the number
+function format(number) {
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    maximumFractionDigits: 2,
+  }).format(number);
 }
