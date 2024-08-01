@@ -79,7 +79,7 @@ input[type='radio'] {
 
 .calculator__container {
   background-color: var(--white);
-  padding: 3.2rem;
+  padding: 6.4rem 3.2rem;
 }
 
 .primary__heading__reset {
@@ -254,4 +254,5 @@ input[type='radio'] {
 /* Result */
 .result {
   background-color: var(--slate-700);
+  padding: 6.4rem 3.2rem;
 }
