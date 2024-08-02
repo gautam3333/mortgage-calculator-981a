@@ -1,0 +1,33 @@
+/* max width 768px */
+@media (max-width: 768px) {
+  .container {
+    background-color: var(--white);
+    display: block;
+  }
+
+  .result {
+    border-bottom-left-radius: 0;
+  }
+}
+
+/* max width 512px */
+@media (max-width: 512px) {
+  .primary__heading__reset {
+    display: block;
+  }
+
+  .primary__heading__reset h1 {
+    margin-bottom: 1.6rem;
+  }
+}
+
+/* max width 384px */
+@media (max-width: 384px) {
+  .termrate {
+    display: block;
+  }
+
+  .submit {
+    padding: 1.4rem 2.8rem;
+  }
+}
