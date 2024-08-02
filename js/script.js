@@ -188,4 +188,6 @@ reset.addEventListener('click', function () {
   radios.forEach((radio) => {
     radio.checked = false;
   });
+  imageText.classList.remove('image-text--close');
+  calculationContainer.classList.remove('calculation--open');
 });
